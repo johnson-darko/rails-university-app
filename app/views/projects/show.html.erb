@@ -5,7 +5,8 @@
       <span><%= @project.name %></span>
       <div>
         <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-light' %>
-        <%= link_to 'Destroy', @project, method: :delete, class: 'btn btn-dark', data: { confirm: 'Are you sure?' } %>
+        <%= button_to 'Destroy', @project, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } }, class: 'btn btn-dark'  %>
+        <%#= button_to 'Delete', [task.project, task], method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } }, class: 'btn btn-dark btn-sm'  %>
       </div>
     </h2>
 
@@ -42,7 +43,7 @@
               <span class="badge badge-<%#= task.badge_color %> mb-3"> 
                 <%#= task.status %></span>
                 <span > <%= task.status %></span>
-                
+
               <div>
 
                 <%= link_to 'Edit', edit_project_task_path(task.project, task), class: 'btn btn-light btn-sm' %>
