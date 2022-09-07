@@ -10,6 +10,7 @@ class TasksController < ApplicationController
 
   # GET projects/1/tasks/1
   def show
+    
   end
 
   # GET projects/1/tasks/new
