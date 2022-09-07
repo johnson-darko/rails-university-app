@@ -5,11 +5,11 @@ class Project < ApplicationRecord
   def badge_color
     case status
     when 'not-started'
-      'secondary'
+      'primary'
     when 'in-progress'
       'info'
     when 'complete'
-      'success'
+      'danger'
     end
   end
 
